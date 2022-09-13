@@ -11,6 +11,7 @@ from django.middleware.csrf import CsrfViewMiddleware
 #     return my_function
 
 #---------------class based middleware-----------
+
 class ClsMiddleware:
      def __init__(self, get_response):
       self.get_response = get_response
@@ -21,6 +22,8 @@ class ClsMiddleware:
         response = self.get_response(request)
         print("this is after view")
         return response
+
+
 
 class Cls2Middleware:
      def __init__(self, get_response):
